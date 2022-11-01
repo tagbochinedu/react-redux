@@ -23,5 +23,5 @@ incrementByAmount: (state, action)=>{
   },
 });
 
-export const { increment, decrement, reset } = counterSlice.actions;
+export const { increment, decrement, reset,incrementByAmount } = counterSlice.actions;
 export default counterSlice.reducer
