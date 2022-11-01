@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement } from "./counterSlice";
+import { increment, decrement, reset } from "./counterSlice";
 
 const Counter = () => {
   const count = useSelector((state) => state.counter.count);
@@ -25,6 +25,14 @@ const Counter = () => {
           }}
         >
           -
+        </button>
+        <button
+          className="px-4 py-2 border border-blue-300 bg-blue-100 mx-4"
+          onClick={() => {
+            dispatch(reset());
+          }}
+        >
+          reset
         </button>
       </div>
     </section>
