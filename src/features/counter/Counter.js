@@ -4,17 +4,18 @@ import { increment, decrement, reset, incrementByAmount } from "./counterSlice";
 
 const Counter = () => {
   const [incrementAmount, setIncrementAmount] = useState(0);
-  const count = useSelector((state) => state.counter.count);
+  const count = useSelector((state) => state);
   const dispatch = useDispatch();
   return (
     <section className='flex flex-col justify-center h-screen'>
       <div>
-        <p className="text-7xl font-semibold text-center my-6">{count}</p>
+        <p className="text-7xl font-semibold text-center my-6"></p>
         <div className="flex justify-center">
           <button
             className="px-4 py-2 border border-blue-300 bg-blue-100 mx-4"
             onClick={() => {
-              dispatch(increment());
+              
+              console.log(count)
             }}
           >
             +
